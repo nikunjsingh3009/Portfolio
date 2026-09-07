@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Resume Portal | Nikunj Singh</title>
+  <meta name="description" content="Connect with Nikunj Singh. Access verified resume, direct contact details, and send inquiries for internships and software engineering opportunities.">
+  <meta name="keywords" content="Nikunj Singh, Contact, Resume, CV, Email, LinkedIn, GitHub, Software Engineer, IoT, AI, LPU">
+  <meta name="author" content="Nikunj Singh">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Nikunj Singh | Contact & Resume Portal">
+  <meta property="og:description" content="Get in touch with Nikunj Singh or review his verified CV & dossier.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📬</text></svg>">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <script>
+    (function() {
+      var saved = localStorage.getItem('portfolio-theme');
+      if (saved === 'dark' || saved === 'light') {
+        document.documentElement.setAttribute('data-theme', saved);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <div id="scroll-progress"></div>
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">N</div>
+        <span>Nikunj<span class="logo-dot">.dev</span></span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="skills.html" class="nav-link">Skills & Tech</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+        <li><a href="certificates.html" class="nav-link">Certificates</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle theme">
+          <svg class="theme-icon icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="theme-icon icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+        <a href="#resume-section" class="btn btn-sm btn-secondary">Resume</a>
+        <a href="#message-form" class="btn btn-sm btn-primary">Hire Me</a>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-drawer">
+    <a href="index.html" class="nav-link"><span>Home</span> <span>→</span></a>
+    <a href="skills.html" class="nav-link"><span>Skills & Tech Stack</span> <span>→</span></a>
+    <a href="projects.html" class="nav-link"><span>Flagship Projects</span> <span>→</span></a>
+    <a href="achievements.html" class="nav-link"><span>Achievements & Leadership</span> <span>→</span></a>
+    <a href="certificates.html" class="nav-link"><span>Certifications</span> <span>→</span></a>
+    <a href="contact.html" class="nav-link active"><span>Get In Touch</span> <span>→</span></a>
+    <div class="mobile-theme-row">
+      <span class="mobile-theme-label">
+        <span>🌓</span>
+        <span class="mobile-theme-text">Theme Mode</span>
+      </span>
+      <button class="theme-toggle-btn mobile-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+        <svg class="theme-icon icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg class="theme-icon icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <main style="padding-top: calc(var(--nav-height) + 2rem);">
+    <section class="section-padding">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-tag">Direct Communication</span>
+          <h1 class="section-title">Get In Touch & <span class="gradient-text">Connect</span></h1>
+          <p class="section-desc">Available for technical internships, IoT research, full-stack software roles, and co-curricular leadership collaborations.</p>
+        </div>
+
+        <div class="grid-2" style="gap: 3rem; margin-bottom: 5rem; align-items: flex-start;">
+          
+          <!-- Column 1: Direct Contact Details & Links -->
+          <div class="reveal reveal-left">
+            <h3 style="font-size: 1.4rem; margin-bottom: 1.25rem; color: var(--text-main);">Contact Information</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">
+              Feel free to reach out via email or phone. I typically respond within 12-24 hours. You can also connect with me across professional platforms.
+            </p>
+
+            <div class="contact-card-list">
+              <!-- Email Item -->
+              <div class="glass-card contact-item">
+                <div class="contact-icon-box" style="background: rgba(37, 99, 235, 0.12); color: var(--accent-cyan);">📧</div>
+                <div style="flex: 1;">
+                  <span class="contact-label">Email Address</span>
+                  <a href="mailto:nikunjsingh3009@gmail.com" class="contact-val">nikunjsingh3009@gmail.com</a>
+                </div>
+                <button class="btn btn-icon" onclick="copyToClipboard('nikunjsingh3009@gmail.com', 'Email')" title="Copy Email">📋</button>
+              </div>
+
+              <!-- Phone Item -->
+              <div class="glass-card contact-item">
+                <div class="contact-icon-box" style="background: rgba(16, 185, 129, 0.12); color: var(--accent-emerald);">📱</div>
+                <div style="flex: 1;">
+                  <span class="contact-label">Mobile Phone</span>
+                  <a href="tel:+919958233701" class="contact-val">+91 99582 33701</a>
+                </div>
+                <button class="btn btn-icon" onclick="copyToClipboard('+919958233701', 'Phone number')" title="Copy Phone">📋</button>
+              </div>
+
+              <!-- LinkedIn Item -->
+              <div class="glass-card contact-item">
+                <div class="contact-icon-box" style="background: rgba(124, 58, 237, 0.12); color: var(--accent-purple);">💼</div>
+                <div style="flex: 1;">
+                  <span class="contact-label">LinkedIn Profile</span>
+                  <a href="https://www.linkedin.com/in/nikunjjsingh" target="_blank" rel="noopener" class="contact-val">linkedin.com/in/nikunjjsingh</a>
+                </div>
+                <a href="https://www.linkedin.com/in/nikunjjsingh" target="_blank" rel="noopener" class="btn btn-icon">↗</a>
+              </div>
+
+              <!-- GitHub Item -->
+              <div class="glass-card contact-item">
+                <div class="contact-icon-box" style="background: rgba(245, 158, 11, 0.12); color: var(--accent-amber);">🐙</div>
+                <div style="flex: 1;">
+                  <span class="contact-label">GitHub Repository</span>
+                  <a href="https://github.com/nikunjsingh3009" target="_blank" rel="noopener" class="contact-val">github.com/nikunjsingh3009</a>
+                </div>
+                <a href="https://github.com/nikunjsingh3009" target="_blank" rel="noopener" class="btn btn-icon">↗</a>
+              </div>
+
+              <!-- Location Item -->
+              <div class="glass-card contact-item">
+                <div class="contact-icon-box" style="background: rgba(244, 63, 94, 0.12); color: var(--accent-rose);">📍</div>
+                <div style="flex: 1;">
+                  <span class="contact-label">Location</span>
+                  <span class="contact-val" style="color: var(--text-main);">Punjab, India</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Interactive Message Form -->
+          <div id="message-form" class="glass-card reveal reveal-right" style="padding: 2.25rem;">
+            <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--text-main);">Send a Direct Message</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+              Fill out the form below to send an immediate communication to Nikunj Singh.
+            </p>
+
+            <form id="contact-form" onsubmit="handleFormSubmit(event)">
+              <div style="margin-bottom: 1.25rem;">
+                <label for="form-name" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--text-main);">Your Full Name *</label>
+                <input type="text" id="form-name" class="form-input" placeholder="e.g. Sarah Jenkins" required>
+              </div>
+
+              <div style="margin-bottom: 1.25rem;">
+                <label for="form-email" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--text-main);">Your Email Address *</label>
+                <input type="email" id="form-email" class="form-input" placeholder="e.g. sarah@techinnovations.com" required>
+              </div>
+
+              <div style="margin-bottom: 1.25rem;">
+                <label for="form-subject" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--text-main);">Subject</label>
+                <input type="text" id="form-subject" class="form-input" placeholder="e.g. Internship Opportunity / IoT Collaboration" required>
+              </div>
+
+              <div style="margin-bottom: 1.5rem;">
+                <label for="form-message" style="display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--text-main);">Message *</label>
+                <textarea id="form-message" class="form-input" rows="5" placeholder="Hi Nikunj, I came across your portfolio and wanted to discuss..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                <span>Transmit Message</span>
+                <span>🚀</span>
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+        <!-- ===================================================================
+             VERIFIED RESUME DOSSIER SECTION
+             =================================================================== -->
+        <div id="resume-section" class="reveal" style="margin-top: 5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;">
+            <div>
+              <span class="section-tag">Formal CV</span>
+              <h2 style="font-size: 1.8rem; color: var(--text-main); margin-top: 0.25rem;">
+                Verified Resume &amp; <span class="gradient-text">Dossier</span>
+              </h2>
+            </div>
+
+            <div style="display: flex; gap: 0.75rem;">
+              <button onclick="window.print()" class="btn btn-secondary">
+                <span>Print CV</span> <span>🖨️</span>
+              </button>
+              <a href="mailto:nikunjsingh3009@gmail.com?subject=Requesting%20Official%20PDF%20Resume%20-%20Nikunj%20Singh" class="btn btn-primary">
+                <span>Request Official PDF</span> <span>📥</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Printable Resume Sheet Container -->
+          <div class="resume-paper-sheet">
+            
+            <!-- Resume Header -->
+            <div class="resume-sheet-header">
+              <div>
+                <h1 style="font-size: 2.2rem; color: #1e3a8a; font-weight: 800; margin-bottom: 0.25rem;">Nikunj Singh</h1>
+                <p style="font-size: 0.95rem; color: #334155; margin: 0;">
+                  LinkedIn: <a href="https://www.linkedin.com/in/nikunjjsingh" target="_blank" style="color: #2563eb; text-decoration: none;">www.linkedin.com/in/nikunjjsingh</a><br>
+                  GitHub: <a href="https://github.com/nikunjsingh3009" target="_blank" style="color: #2563eb; text-decoration: none;">https://github.com/nikunjsingh3009</a>
+                </p>
+              </div>
+
+              <div style="text-align: right;">
+                <p style="font-size: 0.95rem; color: #334155; margin: 0;">
+                  Email: <a href="mailto:nikunjsingh3009@gmail.com" style="color: #2563eb; text-decoration: none;">nikunjsingh3009@gmail.com</a><br>
+                  Mobile: +919958233701
+                </p>
+              </div>
+            </div>
+
+            <!-- Resume Section: SKILLS -->
+            <div class="resume-sec">
+              <h3 class="resume-sec-title">SKILLS</h3>
+              <table class="resume-skills-table">
+                <tr>
+                  <td><strong>Languages:</strong></td>
+                  <td>C/C++, Python, SQL</td>
+                </tr>
+                <tr>
+                  <td><strong>Databases:</strong></td>
+                  <td>MySQL, PL/SQL</td>
+                </tr>
+                <tr>
+                  <td><strong>Tools/Platforms:</strong></td>
+                  <td>VSCode, GitHub</td>
+                </tr>
+                <tr>
+                  <td><strong>Core Concepts:</strong></td>
+                  <td>Data Structures &amp; Algorithms, OOPS, DBMS, Computer Networks</td>
+                </tr>
+                <tr>
+                  <td><strong>Soft Skills:</strong></td>
+                  <td>Leadership, Team Player, Adaptability, Perseverance</td>
+                </tr>
+              </table>
+            </div>
+
+            <!-- Resume Section: PROJECTS -->
+            <div class="resume-sec">
+              <h3 class="resume-sec-title">PROJECTS</h3>
+              
+              <!-- Project 1 -->
+              <div class="resume-item">
+                <div class="resume-item-header">
+                  <strong style="color: #1e3a8a; font-size: 1.05rem;">Voice-Controlled Appliance Controller</strong>
+                  <span style="font-style: italic; color: #475569;">Dec 2025</span>
+                </div>
+                <ul class="resume-item-bullets">
+                  <li>Developed an IoT-based home automation system enabling appliance control through Google Assistant and Alexa voice commands.</li>
+                  <li>Programmed ESP32 for relay switching, device-state monitoring, and real-time event handling.</li>
+                  <li>Integrated MQTT and IFTTT for low-latency communication between voice assistants and connected appliances.</li>
+                  <li>Designed and tested relay-based hardware circuits with power management and device isolation.</li>
+                  <li>Achieved sub-second response time for reliable appliance control.</li>
+                </ul>
+                <div style="font-size: 0.9rem; color: #1e293b; margin-top: 0.35rem;">
+                  <strong>Tech:</strong> ESP32, Arduino Framework, MQTT, IFTTT, Google Assistant API, Alexa Skills, Wi-Fi, Embedded C, Relay Modules
+                </div>
+              </div>
+
+              <!-- Project 2 -->
+              <div class="resume-item" style="margin-top: 1.25rem;">
+                <div class="resume-item-header">
+                  <strong style="color: #1e3a8a; font-size: 1.05rem;">Hotel Management System</strong>
+                  <span style="font-style: italic; color: #475569;">Jan 2025</span>
+                </div>
+                <ul class="resume-item-bullets">
+                  <li>Developed a Python-based hotel management system integrated with MySQL for managing hotel operations and customer records.</li>
+                  <li>Implemented features for customer registration, room booking, room availability, and booking management.</li>
+                  <li>Used MySQL to store and manage customer, room, and reservation data efficiently.</li>
+                  <li>Applied database connectivity in Python to perform real-time insertion, retrieval, updating, and deletion of records.</li>
+                  <li>Designed the system to simplify hotel booking operations and maintain organized records.</li>
+                </ul>
+                <div style="font-size: 0.9rem; color: #1e293b; margin-top: 0.35rem;">
+                  <strong>Tech:</strong> Python, MySQL, SQL, DBMS
+                </div>
+              </div>
+            </div>
+
+            <!-- Resume Section: CERTIFICATES -->
+            <div class="resume-sec">
+              <h3 class="resume-sec-title">CERTIFICATES</h3>
+              <ul class="resume-item-bullets">
+                <li style="display: flex; justify-content: space-between;">
+                  <span>Letter of experience, AIESEC in Jalandhar — AIESEC</span>
+                  <span style="font-style: italic; color: #475569;">Aug 2026</span>
+                </li>
+                <li style="display: flex; justify-content: space-between;">
+                  <span>Military Hospital Attachment Camp, Jalandhar — NCC (National Cadet Corps)</span>
+                  <span style="font-style: italic; color: #475569;">Mar 2026</span>
+                </li>
+                <li style="display: flex; justify-content: space-between;">
+                  <span>Introduction to Python Programming — Reliance Foundation</span>
+                  <span style="font-style: italic; color: #475569;">Jan 2026</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Resume Section: CO-CURRICULAR ACTIVITIES -->
+            <div class="resume-sec">
+              <h3 class="resume-sec-title">CO-CURRICULAR ACTIVITIES</h3>
+              <ul class="resume-item-bullets">
+                <li>Participated in the MH Camp, gaining firsthand exposure to military training, discipline, leadership, teamwork, and the functioning of the armed forces through practical activities and interactions with military personnel.</li>
+                <li>AIESEC, Lovely Professional University — Active member involved in marketing, campaign planning, student outreach, and event promotion.</li>
+                <li>Contributed to AIESEC campaigns and events through content creation, promotion, team collaboration, and student engagement.</li>
+                <li>Participated in planning and promoting initiatives such as Youth Speak Forum, contributing to outreach, registrations, and engagement activities.</li>
+              </ul>
+            </div>
+
+            <!-- Resume Section: EDUCATION -->
+            <div class="resume-sec">
+              <h3 class="resume-sec-title">EDUCATION</h3>
+              
+              <div class="resume-edu-item">
+                <div class="resume-item-header">
+                  <strong style="color: #1e3a8a;">Lovely Professional University</strong>
+                  <span>Phagwara, Punjab</span>
+                </div>
+                <div class="resume-item-header" style="font-style: italic;">
+                  <span>Bachelor of Technology - Computer Science and Engineering &nbsp;|&nbsp; <strong>CGPA: 7.71</strong></span>
+                  <span>Since Aug 2025</span>
+                </div>
+                <div style="font-size: 0.88rem; color: #475569;">Specialization in Artificial Intelligence &amp; Machine Learning</div>
+              </div>
+
+              <div class="resume-edu-item" style="margin-top: 0.85rem;">
+                <div class="resume-item-header">
+                  <strong style="color: #1e3a8a;">SBS AFPS</strong>
+                  <span>Jharoda Kalan, New Delhi, Delhi</span>
+                </div>
+                <div class="resume-item-header" style="font-style: italic;">
+                  <span>Intermediate; <strong>Percentage: 92.2%</strong></span>
+                  <span>Apr 2023 - Mar 2025</span>
+                </div>
+              </div>
+
+              <div class="resume-edu-item" style="margin-top: 0.85rem;">
+                <div class="resume-item-header">
+                  <strong style="color: #1e3a8a;">St. Paul's School</strong>
+                  <span>Aya Nagar, New Delhi, Delhi</span>
+                </div>
+                <div class="resume-item-header" style="font-style: italic;">
+                  <span>Matriculation; <strong>Percentage: 90.6%</strong></span>
+                  <span>Apr 2022 - Mar 2023</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1rem;">
+            <div class="logo-icon">N</div>
+            <span>Nikunj<span class="logo-dot">.dev</span></span>
+          </a>
+          <p style="color: var(--text-muted); font-size: 0.92rem; max-width: 320px; line-height: 1.6;">
+            B.Tech CSE (AI & ML) student at Lovely Professional University. Dedicated to engineering robust IoT systems, software, and databases.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="skills.html">Technologies & Skills</a></li>
+            <li><a href="projects.html">Flagship Projects</a></li>
+            <li><a href="achievements.html">Achievements & Experience</a></li>
+            <li><a href="certificates.html">Certificates & Credentials</a></li>
+            <li><a href="contact.html">Contact & Resume</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:nikunjsingh3009@gmail.com">📧 nikunjsingh3009@gmail.com</a></li>
+            <li><a href="tel:+919958233701">📱 +91 99582 33701</a></li>
+            <li><a href="https://www.linkedin.com/in/nikunjjsingh" target="_blank" rel="noopener">💼 LinkedIn Profile</a></li>
+            <li><a href="https://github.com/nikunjsingh3009" target="_blank" rel="noopener">🐙 GitHub Repository</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Nikunj Singh. All Rights Reserved.</div>
+        <div style="color: var(--accent-cyan);">Hardware, AI & Software Engineering Portfolio</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script>
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('form-name').value.trim();
+      const email = document.getElementById('form-email').value.trim();
+      const subject = document.getElementById('form-subject').value.trim();
+      const message = document.getElementById('form-message').value.trim();
+
+      if (!name || !email || !message) {
+        showToast('Please fill out all required fields.', 'error');
+        return;
+      }
+
+      showToast(`Thank you, ${name}! Your message has been transmitted successfully.`, 'success');
+      document.getElementById('contact-form').reset();
+    }
+  </script>
+</body>
+</html>

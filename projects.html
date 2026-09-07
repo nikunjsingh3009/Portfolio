@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flagship Projects & Live Simulators | Nikunj Singh</title>
+  <meta name="description" content="Explore flagship engineering projects by Nikunj Singh: Voice-Controlled Appliance Controller (IoT/ESP32/MQTT) and Hotel Management System (Python/MySQL).">
+  <meta name="keywords" content="Nikunj Singh, Projects, ESP32, IoT, Voice Automation, Python, MySQL, Relational Database, Home Automation">
+  <meta name="author" content="Nikunj Singh">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Nikunj Singh | Flagship Engineering Projects">
+  <meta property="og:description" content="Interactive simulations and technical architectural breakdowns of systems engineered by Nikunj Singh.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <script>
+    (function() {
+      var saved = localStorage.getItem('portfolio-theme');
+      if (saved === 'dark' || saved === 'light') {
+        document.documentElement.setAttribute('data-theme', saved);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <div id="scroll-progress"></div>
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">N</div>
+        <span>Nikunj<span class="logo-dot">.dev</span></span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="skills.html" class="nav-link">Skills & Tech</a></li>
+        <li><a href="projects.html" class="nav-link active">Projects</a></li>
+        <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+        <li><a href="certificates.html" class="nav-link">Certificates</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle theme">
+          <svg class="theme-icon icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="theme-icon icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+        <a href="contact.html#resume-section" class="btn btn-sm btn-secondary">Resume</a>
+        <a href="contact.html" class="btn btn-sm btn-primary">Hire Me</a>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-drawer">
+    <a href="index.html" class="nav-link"><span>Home</span> <span>→</span></a>
+    <a href="skills.html" class="nav-link"><span>Skills & Tech Stack</span> <span>→</span></a>
+    <a href="projects.html" class="nav-link active"><span>Flagship Projects</span> <span>→</span></a>
+    <a href="achievements.html" class="nav-link"><span>Achievements & Leadership</span> <span>→</span></a>
+    <a href="certificates.html" class="nav-link"><span>Certifications</span> <span>→</span></a>
+    <a href="contact.html" class="nav-link"><span>Get In Touch</span> <span>→</span></a>
+    <div class="mobile-theme-row">
+      <span class="mobile-theme-label">
+        <span>🌓</span>
+        <span class="mobile-theme-text">Theme Mode</span>
+      </span>
+      <button class="theme-toggle-btn mobile-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+        <svg class="theme-icon icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg class="theme-icon icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <main style="padding-top: calc(var(--nav-height) + 2rem);">
+    <section class="section-padding">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-tag">Engineering Showcase</span>
+          <h1 class="section-title">Flagship <span class="gradient-text">Projects & Live Simulators</span></h1>
+          <p class="section-desc">Interactive explorations of systems designed with low-latency IoT protocols, hardware relay circuits, and high-performance relational database architectures.</p>
+        </div>
+
+        <!-- ===================================================================
+             PROJECT 1: VOICE-CONTROLLED APPLIANCE CONTROLLER (IoT)
+             =================================================================== -->
+        <div id="iot-project" class="glass-card reveal" style="margin-bottom: 4.5rem; padding: 2.5rem; border-color: rgba(0, 240, 255, 0.35);">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+            <div>
+              <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                <span class="badge badge-cyan">IoT & Embedded Systems</span>
+                <span class="badge badge-purple">Hardware & Cloud</span>
+              </div>
+              <h2 style="font-size: clamp(1.6rem, 3vw, 2.2rem);">Voice-Controlled Appliance Controller</h2>
+              <p style="color: var(--accent-cyan); font-family: var(--font-mono); font-size: 0.95rem;">Completed in December 2025</p>
+            </div>
+            <div style="display: flex; gap: 0.75rem;">
+              <a href="https://github.com/nikunjsingh3009" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">
+                <span>View on GitHub</span> <span>↗</span>
+              </a>
+            </div>
+          </div>
+
+          <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 1.75rem;">
+            An IoT-based smart home automation system engineered to eliminate manual switching barriers. The device enables real-time control over high-voltage home appliances through natural voice commands via <strong>Google Assistant</strong> and <strong>Amazon Alexa</strong>, backed by an ultra-low latency MQTT message broker and ESP32 microcontroller architecture.
+          </p>
+
+          <!-- Technical Achievements Grid -->
+          <div class="grid-3" style="margin-bottom: 2rem;">
+            <div style="background: var(--bg-tertiary); border: 1px solid var(--border-subtle); padding: 1.25rem; border-radius: var(--radius-sm);">
+              <div style="color: var(--accent-cyan); font-weight: 700; font-size: 1.1rem; margin-bottom: 0.35rem;">⚡ Sub-Second Latency</div>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">MQTT lightweight pub/sub architecture delivering sub-second response times across the globe.</p>
+            </div>
+
+            <div style="background: var(--bg-tertiary); border: 1px solid var(--border-subtle); padding: 1.25rem; border-radius: var(--radius-sm);">
+              <div style="color: var(--accent-purple); font-weight: 700; font-size: 1.1rem; margin-bottom: 0.35rem;">🛡️ Hardware Isolation</div>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Optocoupler isolation and relay snubbers protecting sensitive ESP32 logic from high-voltage spikes.</p>
+            </div>
+
+            <div style="background: var(--bg-tertiary); border: 1px solid var(--border-subtle); padding: 1.25rem; border-radius: var(--radius-sm);">
+              <div style="color: var(--accent-emerald); font-weight: 700; font-size: 1.1rem; margin-bottom: 0.35rem;">🗣️ Multi-Assistant Voice</div>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Integrated with IFTTT webhooks and Google Assistant / Alexa skills for natural language trigger parsing.</p>
+            </div>
+          </div>
+
+          <!-- Key Responsibilities & Bullets from Resume -->
+          <div style="margin-bottom: 2rem;">
+            <h4 style="margin-bottom: 0.75rem; color: var(--text-main);">Detailed Engineering Contributions:</h4>
+            <ul class="project-bullets">
+              <li><strong>Microcontroller Programming:</strong> Programmed ESP32 using Arduino Framework & Embedded C with non-blocking event loops, relay switching, and real-time event handling.</li>
+              <li><strong>Cloud & Messaging Integration:</strong> Configured MQTT and IFTTT for low-latency communication between voice assistants and connected appliances.</li>
+              <li><strong>Hardware Circuit Engineering:</strong> Designed and tested relay-based hardware circuits with power management, device isolation, and surge suppression.</li>
+              <li><strong>State Monitoring & Telemetry:</strong> Implemented real-time feedback loops to verify appliance state transitions and maintain synchronization across mobile applications.</li>
+              <li><strong>Performance Optimization:</strong> Achieved sub-second response time for reliable, high-uptime appliance switching.</li>
+            </ul>
+          </div>
+
+          <div style="margin-bottom: 2rem;">
+            <h4 style="margin-bottom: 0.5rem; color: var(--text-main);">Technologies & Tools:</h4>
+            <div class="project-tech-tags">
+              <span class="tech-tag highlight">ESP32</span>
+              <span class="tech-tag highlight">Arduino Framework</span>
+              <span class="tech-tag highlight">MQTT Protocol</span>
+              <span class="tech-tag highlight">IFTTT</span>
+              <span class="tech-tag">Google Assistant API</span>
+              <span class="tech-tag">Alexa Skills</span>
+              <span class="tech-tag">Wi-Fi (802.11 b/g/n)</span>
+              <span class="tech-tag">Embedded C</span>
+              <span class="tech-tag">Relay Modules</span>
+            </div>
+          </div>
+
+          <!-- LIVE INTERACTIVE IOT SIMULATOR WIDGET -->
+          <div class="simulator-box">
+            <div class="simulator-header">
+              <div class="simulator-title">
+                <span>⚡ Live ESP32 & MQTT Switchboard Simulator</span>
+                <span class="badge badge-emerald" style="font-size: 0.75rem;">CONNECTED</span>
+              </div>
+              <button id="voice-sim-trigger" class="btn btn-sm btn-primary" style="padding: 0.35rem 0.9rem; font-size: 0.8rem;">
+                🎙️ Simulate Voice Command
+              </button>
+            </div>
+
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+              Click any relay switch below to send a live simulated MQTT command to the ESP32 microcontroller, or trigger a voice command.
+            </p>
+
+            <div class="sim-controls-grid">
+              <button class="sim-switch-btn iot-switch" data-device="light" data-pin="23">
+                <span style="font-size: 1.5rem;">💡</span>
+                <strong>Living Room Light</strong>
+                <span class="sim-gpio-tag">GPIO 23</span>
+                <span class="switch-state-text">OFF</span>
+              </button>
+
+              <button class="sim-switch-btn iot-switch" data-device="fan" data-pin="22">
+                <span style="font-size: 1.5rem;">🌀</span>
+                <strong>Ceiling Fan</strong>
+                <span class="sim-gpio-tag">GPIO 22</span>
+                <span class="switch-state-text">OFF</span>
+              </button>
+
+              <button class="sim-switch-btn iot-switch" data-device="ac" data-pin="21">
+                <span style="font-size: 1.5rem;">❄️</span>
+                <strong>Air Conditioner</strong>
+                <span class="sim-gpio-tag">GPIO 21</span>
+                <span class="switch-state-text">OFF</span>
+              </button>
+
+              <button class="sim-switch-btn iot-switch" data-device="tv" data-pin="19">
+                <span style="font-size: 1.5rem;">📺</span>
+                <strong>Smart Entertainment</strong>
+                <span class="sim-gpio-tag">GPIO 19</span>
+                <span class="switch-state-text">OFF</span>
+              </button>
+            </div>
+
+            <!-- Terminal Output Log -->
+            <div class="sim-terminal-output">
+              <div class="sim-terminal-bar">
+                <div class="sim-terminal-dots">
+                  <span class="window-dot red" style="width: 10px; height: 10px;"></span>
+                  <span class="window-dot yellow" style="width: 10px; height: 10px;"></span>
+                  <span class="window-dot green" style="width: 10px; height: 10px;"></span>
+                  <span style="font-family: var(--font-mono); font-size: 0.76rem; color: #94a3b8; margin-left: 0.4rem;">esp32-relay-daemon (/dev/ttyUSB0)</span>
+                </div>
+                <span class="sim-terminal-tag">115200 BAUD</span>
+              </div>
+              <div id="iot-terminal-log" style="overflow-y: auto; max-height: 105px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================================================================
+             PROJECT 2: HOTEL MANAGEMENT SYSTEM (Python & MySQL)
+             =================================================================== -->
+        <div id="hotel-project" class="glass-card reveal" style="padding: 2.5rem; border-color: rgba(168, 85, 247, 0.35);">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+            <div>
+              <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                <span class="badge badge-purple">Python & Relational DBMS</span>
+                <span class="badge badge-cyan">Full-Stack Application</span>
+              </div>
+              <h2 style="font-size: clamp(1.6rem, 3vw, 2.2rem);">Hotel Management System</h2>
+              <p style="color: var(--accent-purple); font-family: var(--font-mono); font-size: 0.95rem;">Completed in January 2025</p>
+            </div>
+            <div style="display: flex; gap: 0.75rem;">
+              <a href="https://github.com/nikunjsingh3009" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">
+                <span>View on GitHub</span> <span>↗</span>
+              </a>
+            </div>
+          </div>
+
+          <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 1.75rem;">
+            A complete enterprise-grade hospitality management system developed in Python and integrated with a normalized MySQL database. Engineered to handle front-desk operations, multi-tier room reservations, real-time availability tracking, dynamic customer record management, and database transaction integrity.
+          </p>
+
+          <!-- Technical Highlights -->
+          <div class="grid-3" style="margin-bottom: 2rem;">
+            <div style="background: var(--bg-tertiary); border: 1px solid var(--border-subtle); padding: 1.25rem; border-radius: var(--radius-sm);">
+              <div style="color: var(--accent-cyan); font-weight: 700; font-size: 1.1rem; margin-bottom: 0.35rem;">🗃️ Normalized MySQL Schema</div>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Relational tables eliminating redundant data and guaranteeing consistency across customer & booking entities.</p>
+            </div>
+
+            <div style="background: var(--bg-tertiary); border: 1px solid var(--border-subtle); padding: 1.25rem; border-radius: var(--radius-sm);">
+              <div style="color: var(--accent-purple); font-weight: 700; font-size: 1.1rem; margin-bottom: 0.35rem;">⚡ Real-time CRUD Engine</div>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Python database connectivity performing insertion, retrieval, updating, and deletion of records seamlessly.</p>
+            </div>
+
+            <div style="background: var(--bg-tertiary); border: 1px solid var(--border-subtle); padding: 1.25rem; border-radius: var(--radius-sm);">
+              <div style="color: var(--accent-emerald); font-weight: 700; font-size: 1.1rem; margin-bottom: 0.35rem;">🔒 Transaction Integrity</div>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">ACID compliant transaction execution preventing conflicting double-booking during concurrent check-ins.</p>
+            </div>
+          </div>
+
+          <!-- Bullets from Resume -->
+          <div style="margin-bottom: 2rem;">
+            <h4 style="margin-bottom: 0.75rem; color: var(--text-main);">Detailed Engineering Contributions:</h4>
+            <ul class="project-bullets">
+              <li><strong>Core System Development:</strong> Developed a Python-based hotel management system integrated with MySQL for managing hotel operations and customer records.</li>
+              <li><strong>Reservation Engine:</strong> Implemented comprehensive features for customer registration, room booking, room availability checking, and booking management.</li>
+              <li><strong>Relational Storage:</strong> Used MySQL to store and manage customer, room, and reservation data efficiently with optimal table structure.</li>
+              <li><strong>Database Connectivity:</strong> Applied database connectivity in Python to perform real-time insertion, retrieval, updating, and deletion of records with parameterized safety.</li>
+              <li><strong>Workflow Optimization:</strong> Designed the system to simplify hotel booking operations and maintain organized, accurate records for front-desk staff.</li>
+            </ul>
+          </div>
+
+          <div style="margin-bottom: 2rem;">
+            <h4 style="margin-bottom: 0.5rem; color: var(--text-main);">Technologies & Stack:</h4>
+            <div class="project-tech-tags">
+              <span class="tech-tag highlight">Python 3.x</span>
+              <span class="tech-tag highlight">MySQL Database</span>
+              <span class="tech-tag highlight">SQL DDL / DML</span>
+              <span class="tech-tag">Database Connectivity</span>
+              <span class="tech-tag">DBMS Concepts</span>
+              <span class="tech-tag">Relational Modeling</span>
+            </div>
+          </div>
+
+          <!-- LIVE HOTEL MANAGEMENT TERMINAL / SQL SIMULATOR -->
+          <div class="simulator-box" style="border-color: rgba(168, 85, 247, 0.3);">
+            <div class="simulator-header">
+              <div class="simulator-title" style="color: var(--accent-purple);">
+                <span>🗄️ Live Hotel Database & SQL Query Simulator</span>
+                <span class="badge badge-purple" style="font-size: 0.75rem;">MySQL 8.0 READY</span>
+              </div>
+              <button class="btn btn-sm btn-secondary hotel-action-btn" data-action="clear_cli" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">
+                Clear Output
+              </button>
+            </div>
+
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+              Click an operation below to simulate real-time Python database queries and front-desk workflows against the MySQL database.
+            </p>
+
+            <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 1.25rem;">
+              <button class="btn btn-sm btn-secondary hotel-action-btn" data-action="check_rooms">
+                🔍 Check Room Availability
+              </button>
+              <button class="btn btn-sm btn-secondary hotel-action-btn" data-action="book_room">
+                🏨 Book Executive Room #102
+              </button>
+              <button class="btn btn-sm btn-secondary hotel-action-btn" data-action="guest_search">
+                👤 Search Customer Record (David)
+              </button>
+            </div>
+
+            <div class="sim-terminal-output" style="min-height: 120px;">
+              <div class="sim-terminal-bar">
+                <div class="sim-terminal-dots">
+                  <span class="window-dot red" style="width: 10px; height: 10px;"></span>
+                  <span class="window-dot yellow" style="width: 10px; height: 10px;"></span>
+                  <span class="window-dot green" style="width: 10px; height: 10px;"></span>
+                  <span style="font-family: var(--font-mono); font-size: 0.76rem; color: #94a3b8; margin-left: 0.4rem;">mysql-cli-session (hotel_db)</span>
+                </div>
+                <span class="sim-terminal-tag">InnoDB ACTIVE</span>
+              </div>
+              <div id="hotel-cli-output" style="overflow-y: auto; max-height: 120px;">
+                <div class="term-muted">[MySQL Connection Pool: Active (4 Connections Available)]</div>
+                <div class="term-info">Hotel Database v1.0. Ready. Select an operation above to execute query.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Next Actions CTA -->
+        <div style="text-align: center; margin-top: 3.5rem;" class="reveal">
+          <a href="achievements.html" class="btn btn-primary">
+            <span>Explore Achievements, NCC Leadership & Academics</span>
+            <span>🏆</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1rem;">
+            <div class="logo-icon">N</div>
+            <span>Nikunj<span class="logo-dot">.dev</span></span>
+          </a>
+          <p style="color: var(--text-muted); font-size: 0.92rem; max-width: 320px; line-height: 1.6;">
+            B.Tech CSE (AI & ML) student at Lovely Professional University. Dedicated to engineering robust IoT systems, software, and databases.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="skills.html">Technologies & Skills</a></li>
+            <li><a href="projects.html">Flagship Projects</a></li>
+            <li><a href="achievements.html">Achievements & Experience</a></li>
+            <li><a href="certificates.html">Certificates & Credentials</a></li>
+            <li><a href="contact.html">Contact & Resume</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:nikunjsingh3009@gmail.com">📧 nikunjsingh3009@gmail.com</a></li>
+            <li><a href="tel:+919958233701">📱 +91 99582 33701</a></li>
+            <li><a href="https://www.linkedin.com/in/nikunjjsingh" target="_blank" rel="noopener">💼 LinkedIn Profile</a></li>
+            <li><a href="https://github.com/nikunjsingh3009" target="_blank" rel="noopener">🐙 GitHub Repository</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Nikunj Singh. All Rights Reserved.</div>
+        <div style="color: var(--accent-cyan);">Hardware, AI & Software Engineering Portfolio</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/projects.js"></script>
+</body>
+</html>

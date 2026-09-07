@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikunj Singh | Computer Science & AI Engineer Portfolio</title>
+  <meta name="description" content="Portfolio of Nikunj Singh - B.Tech CSE student specializing in Artificial Intelligence & Machine Learning at Lovely Professional University. IoT innovator, Python & Database developer, NCC cadet, and AIESEC leader.">
+  <meta name="keywords" content="Nikunj Singh, Portfolio, AI, Machine Learning, IoT, ESP32, Python, MySQL, LPU, NCC, Developer">
+  <meta name="author" content="Nikunj Singh">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Nikunj Singh | CSE & AI Portfolio">
+  <meta property="og:description" content="Explore projects, skills, achievements, and certifications of Nikunj Singh.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon Icon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <!-- Zero-Flicker Instant Theme Script -->
+  <script>
+    (function() {
+      var saved = localStorage.getItem('portfolio-theme');
+      if (saved === 'dark' || saved === 'light') {
+        document.documentElement.setAttribute('data-theme', saved);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Top Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Interactive Background Canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- =========================================================================
+       NAVIGATION BAR
+       ========================================================================= -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">N</div>
+        <span>Nikunj<span class="logo-dot">.dev</span></span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="skills.html" class="nav-link">Skills & Tech</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+        <li><a href="certificates.html" class="nav-link">Certificates</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle theme">
+          <svg class="theme-icon icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="theme-icon icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+        <a href="contact.html#resume-section" class="btn btn-sm btn-secondary">Resume</a>
+        <a href="contact.html" class="btn btn-sm btn-primary">Hire Me</a>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-drawer">
+    <a href="index.html" class="nav-link active"><span>Home</span> <span>→</span></a>
+    <a href="skills.html" class="nav-link"><span>Skills & Tech Stack</span> <span>→</span></a>
+    <a href="projects.html" class="nav-link"><span>Flagship Projects</span> <span>→</span></a>
+    <a href="achievements.html" class="nav-link"><span>Achievements & Leadership</span> <span>→</span></a>
+    <a href="certificates.html" class="nav-link"><span>Certifications</span> <span>→</span></a>
+    <a href="contact.html" class="nav-link"><span>Get In Touch</span> <span>→</span></a>
+    <div class="mobile-theme-row">
+      <span class="mobile-theme-label">
+        <span>🌓</span>
+        <span class="mobile-theme-text">Theme Mode</span>
+      </span>
+      <button class="theme-toggle-btn mobile-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+        <svg class="theme-icon icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg class="theme-icon icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </button>
+    </div>
+    <div style="margin-top: 0.5rem; display: flex; gap: 0.75rem;">
+      <a href="contact.html#resume-section" class="btn btn-secondary" style="flex:1;">View Resume</a>
+      <a href="contact.html" class="btn btn-primary" style="flex:1;">Connect</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- =======================================================================
+         1. HERO SECTION
+         ======================================================================= -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <div class="hero-content reveal">
+            <div class="hero-badge">
+              <span class="status-dot"></span>
+              Available for Internships & High-Impact Projects
+            </div>
+
+            <h1 class="hero-title">
+              Hi, I'm <span class="gradient-text">Nikunj Singh</span>
+            </h1>
+
+            <div class="typed-text-wrapper">
+              <span>&gt;&nbsp;</span><span id="typed-text"></span><span class="typed-cursor"></span>
+            </div>
+
+            <p class="hero-bio">
+              Computer Science & Engineering undergraduate specializing in <strong>Artificial Intelligence & Machine Learning</strong> at <strong>Lovely Professional University (CGPA 7.71)</strong>. Passionate about building low-latency IoT systems, robust database applications, and AI-driven solutions that bridge software with real-world hardware.
+            </p>
+
+            <div class="hero-cta">
+              <a href="projects.html" class="btn btn-primary">
+                <span>Explore Projects</span>
+                <span>⚡</span>
+              </a>
+              <a href="skills.html" class="btn btn-secondary">
+                <span>View Tech Matrix</span>
+                <span>⚙️</span>
+              </a>
+              <a href="contact.html" class="btn btn-outline">
+                <span>Let's Talk</span>
+                <span>💬</span>
+              </a>
+            </div>
+
+            <div class="hero-socials">
+              <span style="font-size: 0.85rem; color: var(--text-subtle); text-transform: uppercase; font-family: var(--font-mono); letter-spacing: 0.08em;">Connect:</span>
+              <a href="https://github.com/nikunjsingh3009" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub Profile">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/nikunjjsingh" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn Profile">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="mailto:nikunjsingh3009@gmail.com" class="social-btn" title="Direct Email">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l9.518 7.713 9.518-7.713v11.817h-19.036z"/></svg>
+              </a>
+              <a href="tel:+919958233701" class="social-btn" title="Direct Phone Call">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20 22.621l-3.521-6.795 3.197-2.459c-.379-1.161-1.02-2.316-1.921-3.468-1.503-1.919-3.462-3.305-5.877-4.158l-2.459 3.197-6.795-3.521 1.752-3.377c1.391-2.679 4.382-4.04 7.473-3.407 8.358 1.711 14.869 8.222 16.58 16.58.633 3.091-.728 6.082-3.407 7.473l-3.377 1.752z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Profile Card Widget -->
+          <div class="hero-visual reveal reveal-zoom delay-2">
+            <div class="profile-card">
+              <div class="avatar-wrapper">
+                <div class="avatar-glow"></div>
+                <div class="avatar-img-box">
+                  <img src="images/nikunj.png" alt="Nikunj Singh" width="150" height="150" loading="eager" decoding="async" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                </div>
+              </div>
+
+              <h2 class="profile-name">Nikunj Singh</h2>
+              <p class="profile-role">B.Tech CSE (AI & ML) Student</p>
+              <div class="badge badge-cyan" style="margin-bottom: 1.5rem;">Lovely Professional University</div>
+
+              <div class="profile-meta-grid">
+                <div class="meta-item">
+                  <span class="meta-label">Current CGPA</span>
+                  <span class="meta-val" style="color: var(--accent-emerald);">7.71 / 10.0</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Focus Area</span>
+                  <span class="meta-val">AI & IoT Systems</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Location</span>
+                  <span class="meta-val">Punjab, India</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Core Languages</span>
+                  <span class="meta-val">Python, C++, SQL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         2. FEATURED PROJECTS PREVIEW SECTION
+         ======================================================================= -->
+    <section class="section-padding" style="background: var(--bg-tertiary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-tag">Showcase</span>
+          <h2 class="section-title">Engineered with <span class="gradient-text">Precision & Innovation</span></h2>
+          <p class="section-desc">Practical systems combining hardware microcontrollers, low-latency messaging, and normalized database management.</p>
+        </div>
+
+        <div class="grid-2">
+          
+          <!-- Project Card 1: IoT Voice Appliance Controller -->
+          <div class="glass-card project-card reveal reveal-left">
+            <div class="project-header">
+              <div class="project-type-badge">
+                <span class="badge badge-cyan">IoT & Embedded Systems</span>
+                <span class="badge badge-purple">Hardware</span>
+              </div>
+              <span class="project-date">Dec 2025</span>
+            </div>
+
+            <h3 class="project-card-title">Voice-Controlled Appliance Controller</h3>
+            <p class="project-card-desc">
+              IoT-based smart home automation system enabling seamless appliance control via Google Assistant and Amazon Alexa voice commands. Programmed ESP32 microcontrollers with MQTT and IFTTT for sub-second switching latency and opto-isolated relay safety.
+            </p>
+
+            <div class="project-highlights">
+              <div class="highlight-item">
+                <span class="highlight-icon">⚡</span>
+                <span>Sub-second voice response time via lightweight MQTT broker</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">🛡️</span>
+                <span>Optocoupler relay circuits with power management & device isolation</span>
+              </div>
+            </div>
+
+            <div class="tech-tag-group">
+              <span class="tech-tag highlight">ESP32</span>
+              <span class="tech-tag">Arduino Framework</span>
+              <span class="tech-tag">MQTT</span>
+              <span class="tech-tag">IFTTT</span>
+              <span class="tech-tag">Google Assistant</span>
+              <span class="tech-tag">Embedded C</span>
+            </div>
+
+            <div class="project-card-footer">
+              <a href="projects.html#iot-project" class="btn btn-sm btn-primary">
+                <span>Launch Interactive Simulator</span>
+                <span>→</span>
+              </a>
+              <a href="https://github.com/nikunjsingh3009" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">
+                <span>GitHub</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project Card 2: Hotel Management System -->
+          <div class="glass-card project-card reveal reveal-right">
+            <div class="project-header">
+              <div class="project-type-badge">
+                <span class="badge badge-purple">Python & MySQL</span>
+                <span class="badge badge-cyan">Relational DBMS</span>
+              </div>
+              <span class="project-date">Jan 2025</span>
+            </div>
+
+            <h3 class="project-card-title">Hotel Management System</h3>
+            <p class="project-card-desc">
+              Comprehensive hospitality software developed in Python integrated with MySQL. Automates guest registrations, room reservation allocations, check-in workflows, real-time database queries, and billing calculations with 3NF relational normalization.
+            </p>
+
+            <div class="project-highlights">
+              <div class="highlight-item">
+                <span class="highlight-icon">🗄️</span>
+                <span>Normalized MySQL database with ACID transaction integrity</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">🔄</span>
+                <span>Real-time CRUD operations via Python MySQL connector</span>
+              </div>
+            </div>
+
+            <div class="tech-tag-group">
+              <span class="tech-tag highlight">Python 3.x</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">SQL DDL / DML</span>
+              <span class="tech-tag">DBMS</span>
+              <span class="tech-tag">Database Connectivity</span>
+            </div>
+
+            <div class="project-card-footer">
+              <a href="projects.html#hotel-project" class="btn btn-sm btn-primary">
+                <span>View Database Architecture</span>
+                <span>→</span>
+              </a>
+              <a href="https://github.com/nikunjsingh3009" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">
+                <span>GitHub</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 2.5rem;" class="reveal">
+          <a href="projects.html" class="btn btn-secondary">
+            <span>Explore All Systems & Live Simulators</span>
+            <span>🚀</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         3. TECHNICAL PROFICIENCIES HIGHLIGHT
+         ======================================================================= -->
+    <section class="section-padding">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-tag">Competencies</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Proficiencies</span></h2>
+          <p class="section-desc">Solid foundation in computer science core principles, programming languages, and engineering tools.</p>
+        </div>
+
+        <div class="grid-4">
+          
+          <div class="glass-card skill-mini-card reveal">
+            <div class="skill-mini-icon">💻</div>
+            <h4>Languages</h4>
+            <p>C, C++, Python, SQL</p>
+            <div class="skill-mini-bar"><div class="skill-bar-fill" data-level="90%"></div></div>
+          </div>
+
+          <div class="glass-card skill-mini-card reveal">
+            <div class="skill-mini-icon">🗄️</div>
+            <h4>Databases</h4>
+            <p>MySQL, PL/SQL</p>
+            <div class="skill-mini-bar"><div class="skill-bar-fill" data-level="86%"></div></div>
+          </div>
+
+          <div class="glass-card skill-mini-card reveal">
+            <div class="skill-mini-icon">🧠</div>
+            <h4>Core CS</h4>
+            <p>DSA, OOPS, DBMS, Computer Networks</p>
+            <div class="skill-mini-bar"><div class="skill-bar-fill" data-level="88%"></div></div>
+          </div>
+
+          <div class="glass-card skill-mini-card reveal">
+            <div class="skill-mini-icon">🛠️</div>
+            <h4>Tools & Platforms</h4>
+            <p>VSCode, GitHub, ESP32, MQTT</p>
+            <div class="skill-mini-bar"><div class="skill-bar-fill" data-level="92%"></div></div>
+          </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 2.5rem;" class="reveal">
+          <a href="skills.html" class="btn btn-primary">
+            <span>Inspect Interactive Skills Matrix & Code Runner</span>
+            <span>⚡</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         4. ACADEMICS & CO-CURRICULAR SNAPSHOT
+         ======================================================================= -->
+    <section class="section-padding" style="background: var(--bg-tertiary); border-top: 1px solid var(--border-subtle);">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-tag">Milestones</span>
+          <h2 class="section-title">Education & <span class="gradient-text">Leadership</span></h2>
+          <p class="section-desc">Consistent academic merit backed by military discipline and global youth organization leadership.</p>
+        </div>
+
+        <div class="grid-3">
+          
+          <div class="glass-card milestone-card reveal">
+            <div class="milestone-badge">Currently Enrolled</div>
+            <div class="milestone-icon">🎓</div>
+            <h3>B.Tech - Computer Science & Engineering</h3>
+            <p class="milestone-sub">Specialization in Artificial Intelligence & Machine Learning</p>
+            <p class="milestone-inst">Lovely Professional University, Punjab</p>
+            <div class="milestone-score">
+              <span>CGPA:</span> <strong>7.71</strong>
+            </div>
+          </div>
+
+          <div class="glass-card milestone-card reveal">
+            <div class="milestone-badge">Defence & Leadership</div>
+            <div class="milestone-icon">🎖️</div>
+            <h3>NCC Military Hospital Camp & AIESEC</h3>
+            <p class="milestone-sub">Military Attachment Training & Youth Outreach</p>
+            <p class="milestone-inst">MH Jalandhar & AIESEC LPU</p>
+            <div class="milestone-score">
+              <span>Impact:</span> <strong>Discipline & Campaign Lead</strong>
+            </div>
+          </div>
+
+          <div class="glass-card milestone-card reveal">
+            <div class="milestone-badge">Senior Secondary</div>
+            <div class="milestone-icon">📜</div>
+            <h3>Intermediate (Class XII)</h3>
+            <p class="milestone-sub">Higher Secondary Science & Technical Foundation</p>
+            <p class="milestone-inst">SBS AFPS, New Delhi</p>
+            <div class="milestone-score">
+              <span>Percentage:</span> <strong>92.2%</strong>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 2.5rem;" class="reveal">
+          <a href="achievements.html" class="btn btn-secondary">
+            <span>Read Complete Co-Curricular & Military Dossier</span>
+            <span>→</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         5. CALL TO ACTION BANNER
+         ======================================================================= -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="glass-card cta-banner reveal">
+          <div class="cta-content">
+            <h2 class="cta-title">Ready to Build Next-Generation Software & Systems?</h2>
+            <p class="cta-desc">
+              I am actively seeking internship opportunities, collaborative research, and software engineering challenges. Let's connect and build something extraordinary.
+            </p>
+            <div class="cta-actions">
+              <a href="contact.html" class="btn btn-primary">
+                <span>Get In Touch With Nikunj</span>
+                <span>📬</span>
+              </a>
+              <a href="contact.html#resume-section" class="btn btn-secondary">
+                <span>View Verified Resume Dossier</span>
+                <span>📄</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1rem;">
+            <div class="logo-icon">N</div>
+            <span>Nikunj<span class="logo-dot">.dev</span></span>
+          </a>
+          <p style="color: var(--text-muted); font-size: 0.92rem; max-width: 320px; line-height: 1.6;">
+            B.Tech CSE (AI & ML) student at Lovely Professional University. Dedicated to engineering robust IoT systems, software, and databases.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="skills.html">Technologies & Skills</a></li>
+            <li><a href="projects.html">Flagship Projects</a></li>
+            <li><a href="achievements.html">Achievements & Experience</a></li>
+            <li><a href="certificates.html">Certificates & Credentials</a></li>
+            <li><a href="contact.html">Contact & Resume</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:nikunjsingh3009@gmail.com">📧 nikunjsingh3009@gmail.com</a></li>
+            <li><a href="tel:+919958233701">📱 +91 99582 33701</a></li>
+            <li><a href="https://www.linkedin.com/in/nikunjjsingh" target="_blank" rel="noopener">💼 LinkedIn Profile</a></li>
+            <li><a href="https://github.com/nikunjsingh3009" target="_blank" rel="noopener">🐙 GitHub Repository</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Nikunj Singh. All Rights Reserved.</div>
+        <div style="color: var(--accent-cyan);">Hardware, AI & Software Engineering Portfolio</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
